@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Examen</string>
     <string name="textview">TextView</string>
-    <string name="tv_body">Body: </string>
+    <string name="tv_description">Description: </string>
     <string name="tv_title">Title: </string>
 
 </resources>

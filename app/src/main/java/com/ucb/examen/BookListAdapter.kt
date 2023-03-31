@@ -19,7 +19,7 @@ class BookListAdapter(val items: List<BookTable>, val context: Context): Recycle
     override fun onBindViewHolder(holder: BookListViewHolder, position: Int) {
         val item = items[position]
         holder.itemView.findViewById<TextView>(R.id.tv_title).text = item.title
-        holder.itemView.findViewById<TextView>(R.id.tv_body).text = item.body
+        holder.itemView.findViewById<TextView>(R.id.tv_description).text = item.description
     }
     class BookListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 }

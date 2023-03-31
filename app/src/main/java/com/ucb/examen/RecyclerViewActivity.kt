@@ -41,15 +41,15 @@ class RecyclerViewActivity : AppCompatActivity() {
 
                 recyclerView = findViewById(R.id.recycler_view)
                 recyclerView.layoutManager = linearLayoutManager
-
-                GlobalScope.launch {
+                recyclerView.adapter = BookListAdapter(bookList.map { BookTable(it.title, it.description) }, this@RecyclerViewActivity)
+                /*GlobalScope.launch {
                     val bookDao = AppRoomDatabase.getDatabase(applicationContext).bookDato()
                     val repository = BookRepository(bookDao)
                     posts?.forEach {
                         repository.insert(BookTable(it.title, it.body))
                     }
                     recyclerView.adapter = BookListAdapter(repository.getListBooks(), this@RecyclerViewActivity)
-                }
+                }*/
                 Log.d("RESP POST", "AUN NO TERMINOOOOOOOOOOOO")
             }
         })
